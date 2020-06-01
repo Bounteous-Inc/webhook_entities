@@ -1,0 +1,15 @@
+webhook_entities.listener:
+  path: '/webhook-entities/listener'
+  defaults:
+    _controller: '\Drupal\webhook_entities\Controller\WebhookEntitiesController::listener'
+    _title: 'Webhook notification listener'
+  requirements:
+    _custom_access: '\Drupal\webhook_entities\Controller\WebhookEntitiesController::access'
+
+webhook_entities.settings:
+  path: '/admin/config/webhook_entities/settings'
+  defaults:
+    _form: '\Drupal\webhook_entities\Form\WebhookSettingsForm'
+    _title: 'Webhook Entities configuration'
+  requirements:
+    _permission: 'administer site configuration'

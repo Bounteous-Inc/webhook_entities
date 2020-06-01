@@ -1,0 +1,7 @@
+name: Webhook Entities
+type: module
+description: 'Manage Drupal entities via webhook notifications'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+

@@ -1,0 +1,7 @@
+services:
+  webhook_entities.crud_manager:
+    class: Drupal\webhook_entities\WebhookCrudManager
+    arguments: ['@entity_type.manager', '@logger.channel.default']
+  webhook_entities.uuid_lookup:
+    class: Drupal\webhook_entities\WebhookUuidLookup
+    arguments: ['@entity_type.manager']
