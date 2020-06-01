@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "cba504ba-3374-4023-ba20-fb309bb1f6e4",
+		"_postman_id": "129f0e97-4488-4a51-a951-07558f6be70e",
 		"name": "Webhook Entities",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -8,26 +8,12 @@
 		{
 			"name": "Create node",
 			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "123456",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "Authorization",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -35,44 +21,30 @@
 					"raw": "\t{\"event\":\"create\",\"uuid\":\"09876\",\"title\":\"This node was created from a webhook notification\",\"body\":\"Read more of our great blog posts at <a href=\\\"https://www.bounteous.com/insights/\\\">bounteous.com</a>\",\"some_extraneous_value\":\"some additional value we don't need\"}"
 				},
 				"url": {
-					"raw": "http://mysite.com/webhook-entities/listener",
+					"raw": "http://webhookblog.lndo.site/webhook-entities/listener",
 					"protocol": "http",
 					"host": [
-						"mysite",
-						"com"
+						"webhookblog",
+						"lndo",
+						"site"
 					],
 					"path": [
 						"webhook-entities",
 						"listener"
 					]
-				},
-				"description": "Create a new Drupal entity"
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Update node",
 			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "123456",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "Authorization",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -80,44 +52,30 @@
 					"raw": "\t{\"event\":\"update\",\"uuid\":\"09876\",\"title\":\"This node was updated by a webhook notification\",\"body\":\"This body text has been updated\"}"
 				},
 				"url": {
-					"raw": "http://mysite.com/webhook-entities/listener",
+					"raw": "http://webhookblog.lndo.site/webhook-entities/listener",
 					"protocol": "http",
 					"host": [
-						"mysite",
-						"com"
+						"webhookblog",
+						"lndo",
+						"site"
 					],
 					"path": [
 						"webhook-entities",
 						"listener"
 					]
-				},
-				"description": "Update an existing Drupal entity"
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Delete node",
 			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "123456",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "Authorization",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -125,21 +83,36 @@
 					"raw": "\t{\"event\":\"delete\",\"uuid\":\"09876\"}"
 				},
 				"url": {
-					"raw": "http://mysite.com/webhook-entities/listener",
+					"raw": "http://webhookblog.lndo.site/webhook-entities/listener",
 					"protocol": "http",
 					"host": [
-						"mysite",
-						"com",
+						"webhookblog",
+						"lndo",
+						"site"
 					],
 					"path": [
 						"webhook-entities",
 						"listener"
 					]
-				},
-				"description": "Delete an existing Drupal entity"
+				}
 			},
 			"response": []
 		}
 	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "123456",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
 	"protocolProfileBehavior": {}
 }

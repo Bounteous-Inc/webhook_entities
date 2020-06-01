@@ -105,7 +105,7 @@ class WebhookCrudManager {
       $existing_entity->save();
       // Log a notice that the entity was updated.
       $this->logger->notice('Node @nid updated via webhook notification.', [
-        '@nid' => $node->id(),
+        '@nid' => $existing_entity->id(),
       ]);
     }
   }
@@ -117,11 +117,11 @@ class WebhookCrudManager {
    *   Required data from the notification body.
    */
   public function deleteEntity($existing_entity) {
-    $existing_entity->delete();
     // Log a notice that the entity was deleted.
     $this->logger->notice('Node @nid deleted via webhook notification.', [
-      '@nid' => $node->id(),
+      '@nid' => $existing_entity->id(),
     ]);
+    $existing_entity->delete();
   }
 
   /**
